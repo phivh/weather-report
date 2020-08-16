@@ -16,6 +16,7 @@ const addItem = (state, action) => {
 const removeItem = (state, action) => {
   return state.items.reduce((acc, item) => {
     if (item.id === action.payload.id) {
+      setLocalState({key : 'items', value: [...acc]});
       return [...acc];
     }
     setLocalState({key : 'items', value: [...acc, item]});

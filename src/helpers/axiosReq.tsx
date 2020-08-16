@@ -15,7 +15,7 @@ interface AxiosReq {
 
 export const axiosReq = async ({ reqType, params }: AxiosReq): Promise<any> => {
   const config: AxiosRequestConfig = {
-    timeout: 3000,
+    timeout: 30000,
     headers: {
       Accept: '*/*'
     }

@@ -5,7 +5,7 @@ import { WeatherItem } from './components/weatherItem';
 
 export const WeatherList = (props: BoxProps) => {
   const { items } = useAppContext();
-  const hasItems = items.length > 0;
+  const hasItems =  items && items.length > 0;
   return (
     <Box {...props} m={2}>
       {hasItems ? (
